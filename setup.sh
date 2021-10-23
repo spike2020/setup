@@ -52,22 +52,25 @@ alias myip="curl ifconfig.co"
 alias ddu="sudo du -h --max-depth=1 2>/dev/null | sort -hr | head -20"
 EOT
 
+# Copy new theme file for better promopt and fix bad chars
+cp ~/.oh-my-zsh/themes/robbyrussell.zsh-theme ~/.oh-my-zsh/themes/robbyrussell.zsh-theme.backup
+cp setup_files/robbyrussell.zsh-theme ~/.oh-my-zsh/themes/robbyrussell.zsh-theme
+
 # Change manually lines 1,6 for bad chr
-vi ~/.oh-my-zsh/themes/robbyrussell.zsh-theme
+#vi ~/.oh-my-zsh/themes/robbyrussell.zsh-theme
 
-# change to push new file Maybe also .zshrc
-
-# add .zshtc file
 
 # change password
-
 #setup .ssh config
 #add public key
+# add fail2ban
+# change default ssh port
 #disable password login
-
 # fc -l 1
 
+##reboot
 
-##reboot?
 
-### move       source $ZSH/oh-my-zsh.sh        to the end
+# Delete orginial and add to the end of the file
+sed -i 's/source \$ZSH\/oh-my-zsh\.sh//g' ~/.zshrc
+echo -e 'source $ZSH/oh-my-zsh.sh' >> ~/.zshrc
