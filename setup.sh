@@ -2,6 +2,7 @@
 
 set -x #echo on
 
+
 # Systen Update
 sudo apt update && sudo apt upgrade -y
 
