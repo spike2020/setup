@@ -12,7 +12,7 @@ sudo apt install -y vim curl wget nmap tcpdump net-tools htop
 # Install ZSH
 sudo apt install zsh -y 
 
-#change default shell to zsh 
+#Change default shell to zsh 
 chsh -s $(which zsh)
 
 # maybe need to exit shell
